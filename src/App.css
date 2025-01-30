@@ -1,0 +1,79 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes hamburger-line-pulse {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.7);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.hamburger-line {
+  transform-origin: center;
+}
+
+.hamburger-line--top {
+  animation: hamburger-line-pulse 1.5s infinite ease-in-out;
+  animation-delay: 0.3s;
+}
+
+.hamburger-line--middle {
+  animation: hamburger-line-pulse 1.5s infinite ease-in-out;
+  animation-delay: 0.6s;
+}
+
+.hamburger-line--bottom {
+  animation: hamburger-line-pulse 1.5s infinite ease-in-out;
+  animation-delay: 0.9s;
+}
+
+.mobile-menu {
+  transition: transform 0.5s ease-in-out;
+}
+
+.mobile-menu--open {
+  transform: translateX(0);
+}
+
+.mobile-menu--closed {
+  transform: translateX(100%);
+}
+
+.mobile-menu__link {
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu__link--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mobile-menu__link--hidden {
+  opacity: 0;
+  transform: translateX(2.5rem);
+}
+
+.mobile-menu__link:hover {
+  transform: translateY(-0.25rem);
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.animate-gradient {
+  animation: gradientMove 5s ease infinite;
+}
